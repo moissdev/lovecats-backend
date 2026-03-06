@@ -26,11 +26,6 @@ export async function GET() {
     // Respuesta al Frontend con encabezados CORS
     return NextResponse.json(data, {
       status: 200,
-      headers: {
-        'Access-Control-Allow-Origin': 'http://localhost:3000',
-        'Access-Control-Allow-Methods': 'GET, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type',
-      },
     });
   } catch (error) {
     console.error('Error en /api/fact:', error);
@@ -43,10 +38,5 @@ export async function GET() {
 
 export async function OPTIONS() {
   return NextResponse.json({}, {
-    headers: {
-      'Access-Control-Allow-Origin': 'http://localhost:3000',
-      'Access-Control-Allow-Methods': 'GET, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
-    },
   });
 }
