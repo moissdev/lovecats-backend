@@ -18,12 +18,7 @@ export async function GET() {
     const history: CatFactRow[] = result.rows;
 
     return NextResponse.json(history, {
-      status: 200,
-      headers: {
-        'Access-Control-Allow-Origin': 'http://localhost:3000',
-        'Access-Control-Allow-Methods': 'GET, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type',
-      },
+      status: 200
     });
   } catch (error) {
     console.error('Database Error:', error);
@@ -36,10 +31,5 @@ export async function GET() {
 
 export async function OPTIONS() {
   return NextResponse.json({}, {
-    headers: {
-      'Access-Control-Allow-Origin': 'http://localhost:3000',
-      'Access-Control-Allow-Methods': 'GET, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
-    },
   });
 }

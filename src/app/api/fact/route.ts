@@ -23,9 +23,8 @@ export async function GET() {
     const values = [data.fact];
     await query(sql, values);
 
-    // Respuesta al Frontend con encabezados CORS
     return NextResponse.json(data, {
-      status: 200,
+      status: 200
     });
   } catch (error) {
     console.error('Error en /api/fact:', error);
