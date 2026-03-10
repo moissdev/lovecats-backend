@@ -18,10 +18,7 @@ export function middleware(request: NextRequest) {
     response.headers.set('Access-Control-Allow-Origin', origin);
   }
 
-  // Se usa Security Headres como medidas de seguridad extra
-  response.headers.set('X-Content-Type-Options', 'nosniff');
-  response.headers.set('X-Frame-Options', 'DENY');
-  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  // Uso de CORS
   response.headers.set('Access-Control-Allow-Methods', 'GET, OPTIONS');
   response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
