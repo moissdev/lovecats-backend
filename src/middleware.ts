@@ -7,7 +7,7 @@ export function middleware(request: NextRequest) {
   // El único origen permitido es la URL del Frontend
   const allowedOrigins = [
     'http://localhost:3000',
-    'https://lovecats-backend.vercel.app'
+    'https://lovecats-frontend.vercel.app'
   ];
 
   // Respuesta base
