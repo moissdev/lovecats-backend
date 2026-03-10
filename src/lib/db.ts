@@ -5,7 +5,7 @@ const pool = new Pool({
   host: process.env.DB_HOST, 
   database: process.env.DB_NAME,
   password: process.env.DB_PASSWORD,
-  port: 6543,
+  port: 6543  ,
 });
 
 export const query = (text: string, params?: unknown[]): Promise<QueryResult> => {
